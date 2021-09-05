@@ -1,0 +1,190 @@
+
+$ColorNav: #9972af;
+$LetrasNav: white;
+$BotonV: green;
+$BotonH: hotpink;
+$FontNav: 10 px;
+$AnchoCartera: 200px;
+
+
+* {
+  margin: 0;
+  padding: 0; }
+
+header nav ul {
+  background-color: $ColorNav;
+  list-style-type: none;
+  position: fixed;
+  font-size: $FontNav;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 700px; 
+  
+  .item {
+    display: inline;
+    font-size: 10 px; 
+   }
+    
+   a {
+      color:$LetrasNav;
+      text-decoration: none;
+    }
+
+}
+
+
+.boxAcerca {
+  display: flex;
+  background-image: linear-gradient(pink, white); 
+
+
+  .imagenAcerca {
+    display: inline-block; 
+  }
+  
+  .textoAcerca {
+      display: inline-block;
+      transform: translate(200px);
+      width: 200px;  
+    }
+}  
+
+.boxFooter {
+  background-image: linear-gradient(black, gray, white);
+  margin: 10 px;
+  padding: 20 px;
+  width: 50 px;
+  height: 50 px; }
+
+.preguntas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 1400px;
+  height: 350px; }
+
+.acerca {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 1400px;
+  height: 350px; }
+
+.acerca2 {
+  display: flex; }
+
+.producto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 110px; }
+
+.productosCentro {
+  display: flex;
+  flex-direction: row; }
+
+.ladoIzquierdo {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: flex-start; }
+
+.centro {
+  align-content: center; }
+
+.ladoDerecho {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: flex-end; }
+
+.preguntasYRespuestas {
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px;
+  grid-template-rows: 50px 50px; }
+
+.cartera {
+  width: $AnchoCartera + 200px;
+  height: 400px; }
+
+.wsp {
+  display: flex;
+  flex-direction: row;
+  justify-content: right; }
+
+.insta {
+  display: flex;
+  flex-direction: row;
+  justify-content: left; }
+
+.pregunta {
+  width: 85px;
+  height: 55px;
+  background: $BotonV; }
+
+.pregunta:hover {
+  background:$BotonH; }
+
+h2 {
+  color: lightpink;
+  background-color: white;
+  font-size: 20 px;
+  font-weight: normal;
+  font-family: "Posterior", sans-serif;
+  text-align: center; }
+
+button {
+  color: black;
+  background-color: white;
+  font-size: 10 px;
+  font-family: "Posterior", sans-serif; }
+
+p {
+  color: black;
+  font-weight: normal;
+  font-size: 12 px;
+  font-family: "Posterior", sans-serif; }
+
+span {
+  color: lightpink;
+  background-color: #e0e07d;
+  font-size: 12 px;
+  font-weight: normal;
+  font-family: "Posterior", sans-serif; }
+
+h3 {
+  color: lightsalmon;
+  font-size: 15 px;
+  font-weight: normal;
+  font-family: "Posterior", sans-serif; }
+
+th {
+  color: violet;
+  background-color: white;
+  font-size: 10 px;
+  font-weight: normal;
+  font-family: "Posterior", sans-serif; }
+
+@media screen and (max-width: 800px) {
+  .cuerpo {
+    flex-direction: column; }
+  .imagenesCarousel {
+    width: 500px;
+    height: 350px; } 
+  }
+
+
+@if $BotonV == "green"{
+    .pregunta{
+    color: red;
+    }
+} @else if $BotonV == "red" {
+  .pregunta{
+    color:aquamarine ;
+    }
+}
+
+@for $i from 1 through 2 {
+ .boton-#{$i}{
+ background-color: aquamarine;
+  }
+}
